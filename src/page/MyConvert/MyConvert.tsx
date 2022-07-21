@@ -2,7 +2,7 @@ import {Button, Drawer, Dropdown, Form, Input, List, Menu, PageHeader, Popover, 
 import {useState} from "react";
 import {ToastError, ToastSuccess} from "@/util/ToastUtil";
 import {randomString} from "@/util/RandomUtil";
-import {QuestionCircleOutlined} from "@ant-design/icons/lib";
+import {GithubOutlined, QuestionCircleOutlined} from "@ant-design/icons/lib";
 import ExplainList, {ExplainTitList} from "@/page/MyConvert/ExplainList";
 import StrUtil from "@/util/StrUtil";
 import SqlToJavaBeanStr, {SqlToJavaBeanSourceTemp} from "@/page/MyConvert/SqlToJavaBeanStr";
@@ -81,6 +81,9 @@ export default function () {
             ghost={false}
             title="代码转换 Code Convert Helper"
             subTitle="致力于帮助开发者减少一些繁琐的开发语言转换"
+            extra={<GithubOutlined className={"hand f-22"} title={"Github"} onClick={() => {
+                window.open("https://github.com/Cmc0/Helper-App", '_blank')
+            }}/>}
         />
 
         <div className={"flex-center p-20 flex1"}>
